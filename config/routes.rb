@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  post :products, to: 'products#add'
+  resources :products, only: [:index]
+  #root 'products#index'
+  get '/', to: 'products#index'
+
+  #get 'products/add', to:
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
